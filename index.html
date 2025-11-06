@@ -3,26 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UI World! — Website Universitas Indonesia</title>
-
-  <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>UI World! — Universitas Indonesia</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- CSS eksternal -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">UI World!</a>
+      <a class="navbar-brand fw-bold" href="#">UI Peek</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#faculties">Faculties</a></li>
@@ -32,16 +31,17 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="text-center py-5 bg-light">
-    <div class="container">
-      <h1 class="display-4 fw-bold text-primary">Explore UI World!</h1>
-      <p class="lead">Temukan informasi fakultas, jurusan, dan UKT Universitas Indonesia 🌻</p>
-      <div class="d-flex justify-content-center gap-2 mt-3">
-        <button id="playBtn" class="btn btn-primary">Play Anthem 🎵</button>
-      </div>
-    </div>
-  </section>
+  <!-- Hero -->
+ <section id="home" class="hero text-center">
+  <div class="container">
+    <h1>Explore UI World!</h1>
+    <p>Temukan informasi fakultas, jurusan, dan UKT Universitas Indonesia 🌻</p>
+    <button id="playAnthem" class="btn btn-primary mt-3">▶️ Putar Anthem UI</button>
+
+    <!-- Audio: Anthem UI -->
+    <audio id="uiAnthem" src="anthem-ui.mp3" preload="auto"></audio>
+  </div>
+</section>
 
   <!-- About -->
   <section id="about" class="py-5">
@@ -49,104 +49,210 @@
       <h2 class="text-center mb-4">About UI</h2>
       <div class="row align-items-center">
         <div class="col-md-6">
-          <p>Universitas Indonesia (UI) adalah perguruan tinggi negeri dengan reputasi akademik tertinggi di Indonesia.
-          Website ini membantu calon mahasiswa untuk mengenal fakultas, jurusan, dan perkiraan UKT di UI.</p>
+          <p>
+            Universitas Indonesia (UI) adalah perguruan tinggi negeri tertua di Indonesia.
+            Website ini memberikan informasi singkat tentang fakultas, jurusan, serta besaran UKT untuk membantu calon mahasiswa mengenal UI lebih dekat.
+          </p>
         </div>
         <div class="col-md-6 text-center">
-          <img src="https://via.placeholder.com/400x220?text=Kampus+UI" alt="Kampus UI" class="img-fluid rounded shadow-sm">
+          <img src="assets/img/makara-ui.png" class="img-fluid makara-img rounded shadow-sm" alt="Makara UI">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Faculties -->
+   <!-- Fakultas (Gedung) bag.1 -->
   <section id="faculties" class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center mb-4">Faculties & Programs</h2>
-      <p class="text-center text-muted">Klik fakultas untuk melihat daftar jurusan.</p>
+      <h2 class="text-center mb-5">Gedung Fakultas UI</h2>
 
-      <div class="accordion" id="facultyAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#adm">
-              Fakultas Ilmu Administrasi
-            </button>
-          </h2>
-          <div id="adm" class="accordion-collapse collapse show" data-bs-parent="#facultyAccordion">
-            <div class="accordion-body">
-              <p>Fokus pada administrasi publik, bisnis, dan fiskal.</p>
-              <ul>
-                <li>Ilmu Administrasi Negara S1</li>
-                <li>Ilmu Administrasi Niaga S1</li>
-                <li>Ilmu Administrasi Fiskal S1</li>
-              </ul>
-            </div>
-          </div>
+      <div class="row g-4">
+        <!-- Gedung 1 -->
+        <div class="col-md-3 col-sm-6 text-center">
+          <img src="https://via.placeholder.com/180x180?text=FIA" class="building" alt="Fakultas Ilmu Administrasi" data-bs-toggle="modal" data-bs-target="#modalFIA">
+          <p class="mt-2 fw-bold">Fakultas Ilmu Administrasi</p>
         </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ft">
-              Fakultas Teknik
-            </button>
-          </h2>
-          <div id="ft" class="accordion-collapse collapse" data-bs-parent="#facultyAccordion">
-            <div class="accordion-body">
-              <p>Menawarkan program studi di bidang teknik mesin, sipil, elektro, dan lainnya.</p>
-              <ul>
-                <li>Teknik Mesin S1</li>
-                <li>Teknik Sipil S1</li>
-                <li>Teknik Elektro S1</li>
-              </ul>
-            </div>
-          </div>
+        <!-- Gedung 2 -->
+        <div class="col-md-3 col-sm-6 text-center">
+          <img src="https://via.placeholder.com/180x180?text=FT" class="building" alt="Fakultas Teknik" data-bs-toggle="modal" data-bs-target="#modalFT">
+          <p class="mt-2 fw-bold">Fakultas Teknik</p>
         </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fik">
-              Fakultas Ilmu Komputer
-            </button>
-          </h2>
-          <div id="fik" class="accordion-collapse collapse" data-bs-parent="#facultyAccordion">
-            <div class="accordion-body">
-              <p>Fokus pada pengembangan teknologi informasi dan komputer modern.</p>
-              <ul>
-                <li>Ilmu Komputer S1</li>
-                <li>Sistem Informasi S1</li>
-                <li>Teknologi Informasi S1</li>
-              </ul>
-            </div>
-          </div>
+        <!-- Gedung 3 -->
+        <div class="col-md-3 col-sm-6 text-center">
+          <img src="https://via.placeholder.com/180x180?text=FASILKOM" class="building" alt="Fakultas Ilmu Komputer" data-bs-toggle="modal" data-bs-target="#modalFASILKOM">
+          <p class="mt-2 fw-bold">Fakultas Ilmu Komputer</p>
+        </div>
+
+        <!-- Gedung 4 -->
+        <div class="col-md-3 col-sm-6 text-center">
+          <img src="https://via.placeholder.com/180x180?text=FEB" class="building" alt="Fakultas Ekonomi & Bisnis" data-bs-toggle="modal" data-bs-target="#modalFEB">
+          <p class="mt-2 fw-bold">Fakultas Ekonomi & Bisnis</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Modal: FIA -->
+  <div class="modal fade" id="modalFIA" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h5 class="modal-title">Fakultas Ilmu Administrasi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Fokus pada bidang administrasi publik, niaga, dan fiskal.</p>
+          <ul>
+            <li>Ilmu Administrasi Negara</li>
+            <li>Ilmu Administrasi Niaga</li>
+            <li>Ilmu Administrasi Fiskal</li>
+          </ul>
+          <p><strong>UKT:</strong> Rp 200.000 – Rp 2.500.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: FT -->
+  <div class="modal fade" id="modalFT" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h5 class="modal-title">Fakultas Teknik</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Fakultas Teknik menyediakan program studi berbasis inovasi dan teknologi.</p>
+          <ul>
+            <li>Teknik Sipil</li>
+            <li>Teknik Elektro</li>
+            <li>Teknik Mesin</li>
+          </ul>
+          <p><strong>UKT:</strong> Rp 300.000 – Rp 3.000.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: FASILKOM -->
+  <div class="modal fade" id="modalFASILKOM" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h5 class="modal-title">Fakultas Ilmu Komputer</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Fokus pada bidang komputer, sistem informasi, dan teknologi digital modern.</p>
+          <ul>
+            <li>Ilmu Komputer</li>
+            <li>Sistem Informasi</li>
+            <li>Teknologi Informasi</li>
+          </ul>
+          <p><strong>UKT:</strong> Rp 500.000 – Rp 4.000.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: FEB -->
+  <div class="modal fade" id="modalFEB" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h5 class="modal-title">Fakultas Ekonomi dan Bisnis</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Menyiapkan mahasiswa di bidang ekonomi, manajemen, dan akuntansi.</p>
+          <ul>
+            <li>Manajemen</li>
+            <li>Akuntansi</li>
+            <li>Ilmu Ekonomi</li>
+          </ul>
+          <p><strong>UKT:</strong> Rp 400.000 – Rp 3.500.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Us -->
+<section id="aboutus" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-5">Meet Our Team</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Anggota 1 -->
+      <div class="col-md-2 col-sm-4">
+        <div class="card border-0 shadow-sm p-3">
+          <img src="nana.jpg" class="team-photo rounded-circle mb-3" alt="Najwa Sakura Affan">
+          <h6 class="fw-bold mb-0">Najwa Sakura Affan</h6>
+          <p class="text-muted small">Project Manager / Developer</p>
+        </div>
+      </div>
+
+      <!-- Anggota 2 -->
+      <div class="col-md-2 col-sm-4">
+        <div class="card border-0 shadow-sm p-3">
+          <img src="anggota2.jpg" class="team-photo rounded-circle mb-3" alt="Anggota 2">
+          <h6 class="fw-bold mb-0">[Nama Anggota 2]</h6>
+          <p class="text-muted small">Assistant Developer</p>
+        </div>
+      </div>
+
+      <!-- Anggota 3 -->
+      <div class="col-md-2 col-sm-4">
+        <div class="card border-0 shadow-sm p-3">
+          <img src="anggota3.jpg" class="team-photo rounded-circle mb-3" alt="Anggota 3">
+          <h6 class="fw-bold mb-0">[Nama Anggota 3]</h6>
+          <p class="text-muted small">Content Researcher</p>
+        </div>
+      </div>
+
+      <!-- Anggota 4 -->
+      <div class="col-md-2 col-sm-4">
+        <div class="card border-0 shadow-sm p-3">
+          <img src="anggota4.jpg" class="team-photo rounded-circle mb-3" alt="Anggota 4">
+          <h6 class="fw-bold mb-0">[Nama Anggota 4]</h6>
+          <p class="text-muted small">Visual Designer</p>
+        </div>
+      </div>
+
+      <!-- Anggota 5 -->
+      <div class="col-md-2 col-sm-4">
+        <div class="card border-0 shadow-sm p-3">
+          <img src="anggota5.jpg" class="team-photo rounded-circle mb-3" alt="Anggota 5">
+          <h6 class="fw-bold mb-0">[Nama Anggota 5]</h6>
+          <p class="text-muted small">Presenter & README Editor</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- More -->
-  <section id="more" class="py-5 bg-light">
-    <div class="container text-center">
+  <section id="more" class="py-5 bg-light text-center">
+    <div class="container">
       <h2>More Information</h2>
-      <p class="text-muted">Ikuti media sosial resmi Universitas Indonesia:</p>
-      <div class="d-flex justify-content-center gap-3 mt-3">
-        <a href="https://instagram.com/universitas.indonesia" class="btn btn-outline-dark" target="_blank">Instagram</a>
-        <a href="https://twitter.com/universitas_ind" class="btn btn-outline-dark" target="_blank">Twitter</a>
-        <a href="https://youtube.com/user/UniversitasIndonesia" class="btn btn-outline-dark" target="_blank">YouTube</a>
-        <a href="https://ui.ac.id/" class="btn btn-outline-dark" target="_blank">Official Site</a>
-      </div>
+      <p class="text-muted mb-3">Ikuti media sosial resmi Universitas Indonesia:</p>
+      <a href="https://instagram.com/universitas.indonesia" class="btn btn-outline-dark mx-1" target="_blank">Instagram</a>
+      <a href="https://twitter.com/universitas_ind" class="btn btn-outline-dark mx-1" target="_blank">Twitter</a>
+      <a href="https://youtube.com/user/UniversitasIndonesia" class="btn btn-outline-dark mx-1" target="_blank">YouTube</a>
+      <a href="https://ui.ac.id" class="btn btn-outline-dark mx-1" target="_blank">Website Resmi</a>
     </div>
   </section>
 
   <footer class="text-center py-3 bg-warning-subtle">
-    <small>© 2025 UI World — Najwa Sakura Affan & Team</small>
+    <small>© 2025 UI Peek — TI-B 2025</small>
   </footer>
-
-  <!-- Audio -->
-  <audio id="anthemAudio" src="anthem.mp3" preload="none"></audio>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS eksternal -->
   <script src="script.js"></script>
 </body>
 </html>
