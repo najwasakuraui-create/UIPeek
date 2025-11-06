@@ -1,13 +1,47 @@
 html {
   scroll-behavior: smooth;
 }
-body {
-  font-family: 'Poppins', sans-serif;
+
+.hero {
+  background: linear-gradient(180deg, #fff8dc, #fff);
+  padding: 80px 0;
 }
-section {
-  transition: background 0.3s ease-in-out;
+
+.hero h1 {
+  font-weight: 700;
+  color: #1f6feb;
+}
+
+.hero p {
+  color: #444;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.makara-img {
+  max-width: 300px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.makara-img:hover {
+  transform: scale(1.05);
+}
+
+.building {
+  width: 180px;
+  height: 180px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 12px;
+}
+
+.building:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 footer {
-  font-size: 0.9rem;
+  background: #fff8dc;
+  color: #333;
 }
