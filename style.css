@@ -1,7 +1,9 @@
 html {
   scroll-behavior: smooth;
 }
-
+body {
+  font-family: 'Poppins', sans-serif;
+}
 section {
   transition: background 0.3s ease-in-out;
 }
