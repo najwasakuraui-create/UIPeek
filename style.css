@@ -21,7 +21,7 @@ html {
 .makara-img {
   max-width: 300px;
   height: auto;
-  transition: transform 0.3s ease;
+  transition: transform 0.1s ease;
 }
 
 .makara-img:hover {
@@ -34,6 +34,22 @@ html {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border-radius: 12px;
+}
+
+.building {
+  width: 180px;
+  height: 240px;
+  cursor: pointer;  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 4px; /* jarak kecil ke teks */
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+#faculties p {
+  margin-top: 4px; /* biar tulisan nempel sama gambar */
 }
 
 .building:hover {
