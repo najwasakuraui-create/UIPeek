@@ -30,34 +30,30 @@ html {
 
 .building {
   width: 180px;
-  height: 180px;
+  height: auto;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 12px;
-}
-
-.building {
-  width: 180px;
-  height: 240px;
-  cursor: pointer;  
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 12px;
-  display: inline-block;
-  margin-bottom: 4px; /* jarak kecil ke teks */
-  vertical-align: middle;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
   object-fit: contain;
-}
-
-#faculties p {
-  margin-top: 4px; /* biar tulisan nempel sama gambar */
 }
 
 .building:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-footer {
-  background: #fff8dc;
-  color: #333;
+/* biar teks tetap nempel pas hover */
+.faculty-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.faculty-item p {
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
 }
