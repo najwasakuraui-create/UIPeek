@@ -1,4 +1,4 @@
-# UI World! — Website Informasi Fakultas (Project UAS)
+# UIPeek! — Website Informasi Fakultas (Project UAS)
 
 **Deskripsi singkat**
 UI Peek! adalah website statis sederhana yang berfungsi untuk menampilkan informasi mengenai fakultas, jurusan, serta estimasi UKT di Universitas Indonesia. Proyek ini dibuat sebagai tugas akhir (UAS) mata kuliah Teknologi Informasi.
