@@ -1,21 +1,20 @@
 # UI World! — Website Informasi Fakultas (Project UAS)
 
 **Deskripsi singkat**
-Situs statis sederhana yang menampilkan informasi fakultas, jurusan, dan estimasi UKT Universitas Indonesia. Dibuat untuk tugas UAS Teknologi Informasi.
+UI Peek! adalah website statis sederhana yang berfungsi untuk menampilkan informasi mengenai fakultas, jurusan, serta estimasi UKT di Universitas Indonesia. Proyek ini dibuat sebagai tugas akhir (UAS) mata kuliah Teknologi Informasi.
+
+Website ini dirancang agar informatif, ringan, dan mudah diakses oleh calon mahasiswa maupun siapa pun yang ingin mengenal UI secara cepat.
 
 **Fitur**
 - Navigasi antar section (smooth scroll)
-- Daftar fakultas & jurusan (accordion)
-- Estimasi UKT (card)
+- Daftar fakultas & jurusan
+- Estimasi UKT
 - Pemutar anthem (Play/Pause)
-- Dark mode toggle
-- Responsif (mobile & desktop)
 
 **Struktur file**
 - `index.html` — markup utama
 - `styles.css` — styling
 - `script.js` — interaksi JavaScript
-- `anthem.mp3` — tambahkan file anthem di root (placeholder)
 
 **Cara jalankan lokal**
 1. Clone repo: `git clone https://github.com/USERNAME/REPO.git`
@@ -31,12 +30,12 @@ Situs statis sederhana yang menampilkan informasi fakultas, jurusan, dan estimas
    - Folder: `/ (root)`
 3. Save → tunggu beberapa menit → situs akan live di `https://USERNAME.github.io/REPO/`
 
-**Pembagian tugas (saran)**
-- Project Lead: Najwa Sakura Affan — desain & koordinasi
-- JS Dev: anggota 2 — fitur Play/Dark/smooth scroll
-- Content: anggota 3 — isi deskripsi & data UKT
-- CSS: anggota 4 — responsive & styling akhir
-- Deployment & Docs: anggota 5 — README & GitHub Pages setup
+**Pembagian tugas**
+- Project Lead / Developer 1: Najwa Sakura Affan — Menyusun struktur website dan repo GitHub (HTML, CSS,JS).
+- Developer 2: Faisal Arkan Nurihsan — Menambah struktur HTML dan menguji fitur.
+- Developer 3: Nabila Fatihah Hanif — Menulis serta memeriksa teks konten website.
+- Developer 4: Muhamad Zaky Wahdany — Membantu riset konten, review UX, dan menyusun README.
+- Developer 5: Caitlyn Anneke Sondang Hasiana Sihontang — Menyiapkan aset visual dan ikut menyusun README serta presentasi.
 
 ---
 
