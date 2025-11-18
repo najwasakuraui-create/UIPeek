@@ -80,8 +80,8 @@ footer {
   background-image: 
     url("assets/img/cloud.png"),
     url("assets/img/cloud2.png"),
-    url("assets/img/road.png");
-  background-size: 150px, 200px, 200px;
+    url("assets/img/newroad.png");
+  background-size: 150px, 200px, 800px;
   background-position: left top, right center, left bottom;
   background-repeat: no-repeat, no-repeat, repeat-x;
 }
@@ -174,3 +174,26 @@ footer {
 /* responsive tweaks */
 @media (max-width: 1000px) { .h-scroll .building { flex: 0 0 220px; } .h-scroll .building img { width: 180px; margin-bottom: -6px; } }
 @media (max-width: 560px) { .h-scroll .building { flex: 0 0 160px; } .h-scroll .building img { width: 140px; margin-bottom: -4px; } }
+
+/* BUS: tampilan statis di tengah, menimpa jalan (size 300px) */
+.scene-wrapper { position: relative; }
+
+#sceneBus {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -180px;         /* atur ini supaya bus "menempel" di marka jalan */
+  height: 400px;         /* sesuai permintaan */
+  width: auto;
+  z-index: 95;           /* di atas road, di bawah/di atas gedung tergantung z-index gedung */
+  pointer-events: none;  /* klik tetap ke gedung, bukan ke bus */
+  user-select: none;
+}
+
+/* responsive: kecilkan pada layar sempit */
+@media (max-width: 900px) {
+  #sceneBus { height: 220px; bottom: 90px; }
+}
+@media (max-width: 560px) {
+  #sceneBus { height: 160px; bottom: 60px; }
+}
