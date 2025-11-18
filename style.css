@@ -80,10 +80,10 @@ footer {
   background-image: 
     url("assets/img/cloud.png"),
     url("assets/img/cloud2.png"),
-    url("assets/img/road.png");
-  background-size: 150px, 200px, 200px;
+    url("assets/img/newroad.png");
+  background-size: 150px, 200px, 800px;
   background-position: left top, right center, left bottom;
-  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-repeat: no-repeat, no-repeat, repeat-x ;
 }
 
 /* biar teks tetap nempel pas hover */
@@ -99,3 +99,129 @@ footer {
   font-weight: 600;
   text-align: center;
 }
+<<<<<<< Updated upstream
+=======
+
+/* FACULTIES: horizontal track, label above, image touch road */
+.faculties-fullpage { height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px 0; box-sizing: border-box; }
+.scene-wrapper { width: 100%; max-width: 1400px; margin: 0 auto; position: relative; }
+
+/* horizontal scroller */
+.h-scroll {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;      /* ujung bawah gedung sejajar jalan */
+  gap: 36px;
+  padding: 28px 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* scrollbar styling */
+.h-scroll::-webkit-scrollbar { height: 10px; }
+.h-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 8px; }
+
+/* building item */
+.h-scroll .building {
+  flex: 0 0 260px;            /* lebar tiap item */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;  /* gambar di bawah */
+  scroll-snap-align: center;
+  background: transparent;
+  padding-bottom: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* label di atas (simple, no box) */
+.h-scroll .building .label {
+  margin: 0 0 8px 0;
+  padding: 4px 8px;
+  font-weight: 800;
+  text-align: center;
+  color: #111;
+  background: transparent;
+  pointer-events: none;
+  z-index: 90;
+  line-height: 1.05;
+}
+
+/* image gedung: bottom Menempel jalan */
+.h-scroll .building img {
+  display: block;
+  width: 220px;
+  height: auto;
+  margin: 0;
+  margin-bottom: -8px;        /* atur agar "menempel" ke road */
+  z-index: 85;
+  box-shadow: 0 18px 40px rgba(3,20,40,0.10);
+  border-radius: 6px;         /* hapus jika PNG transparan dan ingin tajam */
+  background: transparent;
+}
+
+/* active/focused */
+.h-scroll .building.active { transform: translateY(-10px) scale(1.02); z-index: 110; }
+.h-scroll .building.active img { box-shadow: 0 30px 64px rgba(3,20,40,0.16); }
+
+/* ensure road under buildings (if road element exists) */
+.road-graphic-img { z-index: 60; }
+
+/* responsive tweaks */
+@media (max-width: 1000px) { .h-scroll .building { flex: 0 0 220px; } .h-scroll .building img { width: 180px; margin-bottom: -6px; } }
+@media (max-width: 560px) { .h-scroll .building { flex: 0 0 160px; } .h-scroll .building img { width: 140px; margin-bottom: -4px; } }
+
+/* buat header modal tetap terlihat saat body discroll */
+.modal-dialog {
+  max-height: 90vh;
+}
+.modal-content {
+  height: 100%;
+}
+.modal-body {
+  max-height: calc(90vh - 70px); /* 70px = tinggi header modal */
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+.modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fbc707; /* samakan warna header kalau perlu */
+}
+.modal-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  background: #fff;
+}
+
+/* BUS: tampilan statis di tengah, menimpa jalan (size 300px) */
+.scene-wrapper { position: relative; }
+
+#sceneBus {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -180px;         /* atur ini supaya bus "menempel" di marka jalan */
+  height: 400px;         /* sesuai permintaan */
+  width: auto;
+  z-index: 95;           /* di atas road, di bawah/di atas gedung tergantung z-index gedung */
+  pointer-events: none;  /* klik tetap ke gedung, bukan ke bus */
+  user-select: none;
+}
+
+/* responsive: kecilkan pada layar sempit */
+@media (max-width: 900px) {
+  #sceneBus { height: 220px; bottom: 90px; }
+}
+@media (max-width: 560px) {
+  #sceneBus { height: 160px; bottom: 60px; }
+}
+>>>>>>> Stashed changes
