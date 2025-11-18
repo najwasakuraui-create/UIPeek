@@ -3,11 +3,11 @@ html {
 }
 
 nav {
-  background: linear-gradient(180deg, #fbc707);
+  background: linear-gradient(180deg, #fff);
 }
 
 body {
-  background: linear-gradient(180deg, #e9faff);
+  background: linear-gradient(180deg, #5dc9ff, #e9faff);
   margin: 0;
   padding: 0;
 }
@@ -32,7 +32,7 @@ footer {
 }
 
 .hero {
-  background: linear-gradient(180deg, #5dc9ff, #e9faff);
+  background: linear-gradient(180deg, #75cfff);
   padding: 80px 0;
 }
 
@@ -74,6 +74,15 @@ footer {
 .building:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#about {
+  background-image: 
+    url("assets/img/cloud.png"),
+    url("assets/img/cloud2.png");
+  background-size: 150px, 200px;
+  background-position: left top, right center;
+  background-repeat: no-repeat, no-repeat;
 }
 
 #faculties {
