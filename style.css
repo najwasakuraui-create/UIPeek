@@ -177,6 +177,7 @@ footer {
 @media (max-width: 1000px) { .h-scroll .building { flex: 0 0 220px; } .h-scroll .building img { width: 180px; margin-bottom: -6px; } }
 @media (max-width: 560px) { .h-scroll .building { flex: 0 0 160px; } .h-scroll .building img { width: 140px; margin-bottom: -4px; } }
 
+<<<<<<< Updated upstream
 /* buat header modal tetap terlihat saat body discroll */
 .modal-dialog {
   max-height: 90vh;
@@ -202,6 +203,8 @@ footer {
   background: #fff;
 }
 
+=======
+>>>>>>> Stashed changes
 /* BUS: tampilan statis di tengah, menimpa jalan (size 300px) */
 .scene-wrapper { position: relative; }
 
@@ -226,6 +229,9 @@ footer {
 }
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
