@@ -4,6 +4,7 @@ const playBtn = document.getElementById("playAnthem");
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 let isPlaying = false;
 
 playBtn.addEventListener("click", () => {
@@ -16,6 +17,8 @@ playBtn.addEventListener("click", () => {
     playBtn.textContent = "▶️ Putar Anthem UI";
     isPlaying = false;
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 /* --- Anthem play --- */
@@ -64,6 +67,7 @@ if (playBtn && anthem) {
     const scrollLeft = scroller.scrollLeft;
     const target = (it.left + it.right)/2 - (rect.left + rect.right)/2;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
     scroller.scrollTo({
       left: scrollLeft + target,
@@ -92,6 +96,8 @@ toTopBtn.addEventListener("click", () => {
 });
 =======
 =======
+=======
+>>>>>>> Stashed changes
 
     scroller.scrollTo({
       left: scrollLeft + target,
@@ -99,6 +105,9 @@ toTopBtn.addEventListener("click", () => {
     });
   }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   /* CLICK → langsung buka modal */
   buildings.forEach((b) => {
@@ -189,6 +198,9 @@ toTopBtn.addEventListener("click", () => {
 
 })(); // IIFE END
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
