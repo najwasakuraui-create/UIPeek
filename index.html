@@ -62,46 +62,93 @@
     </div>
   </section>
 
-
-
-   <!-- Fakultas (Gedung) bag.1 -->
-    <section id="faculties" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Gedung Fakultas UI</h2>
-
-      <div class="row g-5 justify-content-center">
-        <!-- Gedung 1 (FK) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FK_1_optimized_100.png" class="building" alt="Fakultas Kedokteran" data-bs-toggle="modal" data-bs-target="#modalFK">
-          <p class="mt-2 fw-bold">Fakultas Kedokteran</p>
+<!-- START: faculties (ganti section faculties lama dengan ini) -->
+<section id="faculties" class="faculties-fullpage" tabindex="-1">
+  <div class="container-fluid">
+    <h2 class="text-center mb-3">Gedung Fakultas UI</h2>
+    <div class="scene-wrapper">
+      <div class="h-scroll" role="list" aria-label="Daftar fakultas horizontal">
+        <!-- 15 buildings: label di atas, image di bawah -->
+        <div class="building" data-id="FK" role="listitem">
+          <div class="label">Fakultas<br>Kedokteran<br><small>FK</small></div>
+          <img src="assets/img/resized-img/FK_1_optimized_100.png" alt="FK">
         </div>
 
-        <!-- Gedung 2 (FF) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FF_optimized_100.png" class="building" alt="Fakultas Farmasi" data-bs-toggle="modal" data-bs-target="#modalFF">
-          <p class="mt-2 fw-bold">Fakultas Farmasi</p>
+        <div class="building" data-id="FF" role="listitem">
+          <div class="label">Fakultas<br>Farmasi<br><small>FF</small></div>
+          <img src="assets/img/resized-img/FF_optimized_100.png" alt="FF">
         </div>
 
-        <!-- Gedung 3 (FPsi) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FPSI_optimized_100.png" class="building" alt="Fakultas Psikologi" data-bs-toggle="modal" data-bs-target="#modalFPsi">
-          <p class="mt-2 fw-bold">Fakultas Psikologi</p>
+        <div class="building" data-id="FPsi" role="listitem">
+          <div class="label">Fakultas<br>Psikologi<br><small>FPsi</small></div>
+          <img src="assets/img/resized-img/FPSI_optimized_100.png" alt="FPsi">
         </div>
 
-        <!-- Gedung 4 (FT) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FT_optimized_100.png" class="building" alt="Fakultas Teknik" data-bs-toggle="modal" data-bs-target="#modalFT">
-          <p class="mt-2 fw-bold">Fakultas Teknik</p>
+        <div class="building" data-id="FT" role="listitem">
+          <div class="label">Fakultas<br>Teknik<br><small>FT</small></div>
+          <img src="assets/img/resized-img/FT_optimized_100.png" alt="FT">
         </div>
 
-        <!-- Gedung 5 (FH) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FH_1_optimized_100.png" class="building" alt="Fakultas Hukum" data-bs-toggle="modal" data-bs-target="#modalFH">
-          <p class="mt-2 fw-bold">Fakultas Hukum</p>
+        <div class="building" data-id="FH" role="listitem">
+          <div class="label">Fakultas<br>Hukum<br><small>FH</small></div>
+          <img src="assets/img/resized-img/FH_1_optimized_100.png" alt="FH">
+        </div>
+
+        <div class="building" data-id="FEB" role="listitem">
+          <div class="label">Fakultas<br>Ekonomi & Bisnis<br><small>FEB</small></div>
+          <img src="assets/img/resized-img/FEB_optimized_100.png" alt="FEB">
+        </div>
+
+        <div class="building" data-id="FIB" role="listitem">
+          <div class="label">Fakultas<br>Ilmu Pengetahuan Budaya<br><small>FIB</small></div>
+          <img src="assets/img/resized-img/FIB_1_optimized_100.png" alt="FIB">
+        </div>
+
+        <div class="building" data-id="FISIP" role="listitem">
+          <div class="label">FISIP<br><small>FISIP</small></div>
+          <img src="assets/img/resized-img/FISIP_1_optimized_100.png" alt="FISIP">
+        </div>
+
+        <div class="building" data-id="FIA" role="listitem">
+          <div class="label">FIA<br><small>FIA</small></div>
+          <img src="assets/img/resized-img/FIA_1_optimized_100.png" alt="FIA">
+        </div>
+
+        <div class="building" data-id="FMIPA" role="listitem">
+          <div class="label">FMIPA<br><small>FMIPA</small></div>
+          <img src="assets/img/resized-img/FMIPA_optimized_100.png" alt="FMIPA">
+        </div>
+
+        <div class="building" data-id="FASILKOM" role="listitem">
+          <div class="label">Fakultas<br>Ilmu Komputer<br><small>FASILKOM</small></div>
+          <img src="assets/img/resized-img/fasilkom_optimized_100.png" alt="FASILKOM">
+        </div>
+
+        <div class="building" data-id="FIK" role="listitem">
+          <div class="label">FIK<br><small>FIK</small></div>
+          <img src="assets/img/resized-img/FIK_1_optimized_100.png" alt="FIK">
+        </div>
+
+        <div class="building" data-id="FKG" role="listitem">
+          <div class="label">FKG<br><small>FKG</small></div>
+          <img src="assets/img/resized-img/FKG_1_optimized_100.png" alt="FKG">
+        </div>
+
+        <div class="building" data-id="FKM" role="listitem">
+          <div class="label">FKM<br><small>FKM</small></div>
+          <img src="assets/img/resized-img/FKM_optimized_100.png" alt="FKM">
+        </div>
+
+        <div class="building" data-id="VOKASI" role="listitem">
+          <div class="label">Vokasi<br><small>VOKASI</small></div>
+          <img src="assets/img/resized-img/VOKASI_optimized_100.png" alt="VOKASI">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<!-- END: faculties -->
+
 
 <!-- Modal Fakultas Kedokteran -->
 <div class="modal fade" id="modalFK" tabindex="-1">
@@ -346,43 +393,6 @@
   </div>
 </div>
 
-     <!-- Fakultas (Gedung) bag.2 -->
-  <section id="faculties" class="py-5">
-    <div class="container">
-
-      <div class="row g-5 justify-content-center">
-        <!-- Gedung 1 (FEB) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FEB_optimized_100.png" class="building" alt="Fakultas Ekonomi dan Bisnis" data-bs-toggle="modal" data-bs-target="#modalFEB">
-          <p class="mt-2 fw-bold">Fakultas Ekonomi dan Bisnis</p>
-        </div>
-
-        <!-- Gedung 2 (FIB) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FIB_1_optimized_100.png" class="building" alt="Fakultas Ilmu Pengetahuan Budaya" data-bs-toggle="modal" data-bs-target="#modalFIB">
-          <p class="mt-2 fw-bold">Fakultas Ilmu Pengetahuan Budaya</p>
-        </div>
-
-        <!-- Gedung 3 (FISIP) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FISIP_1_optimized_100.png" class="building" alt="Fakultas Ilmu Sosial dan Ilmu Politik" data-bs-toggle="modal" data-bs-target="#modalFISIP">
-          <p class="mt-2 fw-bold">Fakultas Ilmu Sosial dan Ilmu Politik</p>
-        </div>
-
-        <!-- Gedung 4 (FIA) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FIA_1_optimized_100.png" class="building" alt="Fakultas Ilmu Administrasi" data-bs-toggle="modal" data-bs-target="#modalFIA">
-          <p class="mt-2 fw-bold">Fakultas Ilmu Administrasi</p>
-        </div>
-
-        <!-- Gedung 5 (FMIPA) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FMIPA_optimized_100.png" class="building" alt="Fakultas Matematika dan Ilmu Pengetahuan Alam" data-bs-toggle="modal" data-bs-target="#modalFMIPA">
-          <p class="mt-2 fw-bold">Fakultas Matematika dan Ilmu Pengetahuan Alam</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
 <!-- Modal Fakultas Ekonomi & Bisnis -->
 <div class="modal fade" id="modalFEB" tabindex="-1">
@@ -626,44 +636,6 @@
   </div>
 </div>
 
-
-   <!-- Fakultas (Gedung) bag.3 -->
-    <section id="faculties" class="py-5">
-    <div class="container">
-      
-      <div class="row g-5 justify-content-center">
-        <!-- Gedung 1 (FASILKOM) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/fasilkom_optimized_100.png" class="building" alt="Fakultas Ilmu Komputer" data-bs-toggle="modal" data-bs-target="#modalFASILKOM">
-          <p class="mt-2 fw-bold">Fakultas Ilmu Komputer</p>
-        </div>
-
-        <!-- Gedung 1 (FIK) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FIK_1_optimized_100.png" class="building" alt="Fakultas Ilmu Keperawatan" data-bs-toggle="modal" data-bs-target="#modalFIK">
-          <p class="mt-2 fw-bold">Fakultas Ilmu Keperawatan</p>
-        </div>
-
-        <!-- Gedung 2 (FKG) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FKG_1_optimized_100.png" class="building" alt="Fakultas Kedokteran Gigi" data-bs-toggle="modal" data-bs-target="#modalFKG">
-          <p class="mt-2 fw-bold">Fakultas Kedokteran Gigi</p>
-        </div>
-
-        <!-- Gedung 3 (FKM) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/FKM_optimized_100.png" class="building" alt="Fakultas Kesehatan Masyarakat" data-bs-toggle="modal" data-bs-target="#modalFKM">
-          <p class="mt-2 fw-bold">Fakultas Kesehatan Masyarakat</p>
-        </div>
-
-        <!-- Gedung 4 (Program Pendidikan Vokasi) -->
-        <div class="col-md-2 col-sm-4 text-center">
-          <img src="assets/img/resized-img/VOKASI_optimized_100.png" class="building" alt="Program Pendidikan Vokasi" data-bs-toggle="modal" data-bs-target="#modalVOKASI">
-          <p class="mt-2 fw-bold">Program Pendidikan Vokasi</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
 <!-- Modal Fakultas Ilmu Komputer -->
 <div class="modal fade" id="modalFASILKOM" tabindex="-1">
