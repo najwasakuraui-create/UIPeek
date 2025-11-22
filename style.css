@@ -3,8 +3,18 @@ html {
 }
 
 nav {
-  background: linear-gradient(180deg, #fbc707);
+  background: linear-gradient(180deg, #ebf7ff);
 }
+
+.navbar-brand {
+  font-size: 30px; /* ubah angkanya sesuai kebutuhan */
+  font-weight: 700;
+}
+
+.logo-nav {
+  height: 60px; /* ubah sesuai ukuran */
+}
+
 
 body {
   background: linear-gradient(180deg, #e9faff);
@@ -23,7 +33,6 @@ body {
   margin: 15px;
   padding: 20px;
 }
-
 
 footer {
   background: linear-gradient(180deg, #e9faff);
@@ -47,6 +56,19 @@ footer {
   margin: 10px auto;
 }
 
+.hero p {
+  margin-top: -98px; /* dari default ± 24px jadi lebih dekat */
+}
+
+
+.hero-title-img {
+  display: block;
+  width: 620px;    /* kamu bisa ubah sesuai keinginan */
+  max-width: 90%;
+  margin: 0 auto 12px auto;
+}
+
+
 .makara-img {
   max-width: 300px;
   height: auto;
@@ -58,26 +80,27 @@ footer {
 }
 
 .building {
-  background: linear-gradient(180deg, transparent);
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  width: 180px;
+  width: 250px;
   height: auto;
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease;
   border-radius: 15px;
   display: block;
-  margin: 0 auto;
   object-fit: contain;
+  outline: none;
+  border: none;
 }
 
+/* HOVER (container) */
 .building:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* FACULTIES ROAD AREA */
 #faculties {
-  background-image: 
+  background-image:
     url("assets/img/cloud.png"),
     url("assets/img/cloud2.png"),
     url("assets/img/newroad.png");
@@ -86,7 +109,6 @@ footer {
   background-repeat: no-repeat, no-repeat, repeat-x;
 }
 
-/* biar teks tetap nempel pas hover */
 .faculty-item {
   display: flex;
   flex-direction: column;
@@ -100,16 +122,29 @@ footer {
   text-align: center;
 }
 
-/* FACULTIES: horizontal track, label above, image touch road */
-.faculties-fullpage { height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px 0; box-sizing: border-box; }
-.scene-wrapper { width: 100%; max-width: 1400px; margin: 0 auto; position: relative; }
+/* FACULTIES full page scene */
+.faculties-fullpage {
+  height: 100vh;
+  display: flex;
+ align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+  box-sizing: border-box;
+}
 
-/* horizontal scroller */
+.scene-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Horizontal scroller */
 .h-scroll {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: flex-end;      /* ujung bawah gedung sejajar jalan */
+  align-items: flex-end;
   gap: 36px;
   padding: 28px 40px;
   overflow-x: auto;
@@ -120,17 +155,22 @@ footer {
   -webkit-overflow-scrolling: touch;
 }
 
-/* scrollbar styling */
-.h-scroll::-webkit-scrollbar { height: 10px; }
-.h-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 8px; }
+/* scrollbar */
+.h-scroll::-webkit-scrollbar {
+ scrollbar-width: none;
+}
+
+.h-scroll::-webkit-scrollbar-thumb {
+  display: none;
+}
 
 /* building item */
 .h-scroll .building {
-  flex: 0 0 260px;            /* lebar tiap item */
+  flex: 0 0 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;  /* gambar di bawah */
+  justify-content: flex-end;
   scroll-snap-align: center;
   background: transparent;
   padding-bottom: 0;
@@ -138,7 +178,7 @@ footer {
   position: relative;
 }
 
-/* label di atas (simple, no box) */
+/* Label */
 .h-scroll .building .label {
   margin: 0 0 8px 0;
   padding: 4px 8px;
@@ -151,49 +191,191 @@ footer {
   line-height: 1.05;
 }
 
-/* image gedung: bottom Menempel jalan */
+/* ============================= */
+/*       IMAGE FINAL EFFECT      */
+/* ============================= */
+
+/* NORMAL — flat, no shadow */
 .h-scroll .building img {
   display: block;
-  width: 220px;
+  width: 300px;
   height: auto;
   margin: 0;
-  margin-bottom: -8px;        /* atur agar "menempel" ke road */
+  margin-bottom: -8px;
   z-index: 85;
-  box-shadow: 0 18px 40px rgba(3,20,40,0.10);
-  border-radius: 6px;         /* hapus jika PNG transparan dan ingin tajam */
+
+  border-radius: 0;
+  box-shadow: none;
   background: transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* active/focused */
-.h-scroll .building.active { transform: translateY(-10px) scale(1.02); z-index: 110; }
-.h-scroll .building.active img { box-shadow: 0 30px 64px rgba(3,20,40,0.16); }
 
-/* ensure road under buildings (if road element exists) */
-.road-graphic-img { z-index: 60; }
+/* ACTIVE — naik sedikit tapi tanpa shadow */
+.h-scroll .building.active img {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: none;
+}
 
-/* responsive tweaks */
-@media (max-width: 1000px) { .h-scroll .building { flex: 0 0 220px; } .h-scroll .building img { width: 180px; margin-bottom: -6px; } }
-@media (max-width: 560px) { .h-scroll .building { flex: 0 0 160px; } .h-scroll .building img { width: 140px; margin-bottom: -4px; } }
+/* Clear ALL possible container shadows */
+.building,
+.building:hover,
+.h-scroll .building,
+.h-scroll .building:hover,
+.h-scroll .building.active {
+  box-shadow: none !important;
+}
 
-/* BUS: tampilan statis di tengah, menimpa jalan (size 300px) */
-.scene-wrapper { position: relative; }
+
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .h-scroll .building { flex: 0 0 220px; }
+  .h-scroll .building img { width: 180px; margin-bottom: -6px; }
+}
+
+@media (max-width: 560px) {
+  .h-scroll .building { flex: 0 0 160px; }
+  .h-scroll .building img { width: 140px; margin-bottom: -4px; }
+}
+
+/* Road */
+.road-graphic-img {
+  z-index: 60;
+}
+
+/* BUS */
+.scene-wrapper {
+  position: relative;
+}
 
 #sceneBus {
+  
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -180px;         /* atur ini supaya bus "menempel" di marka jalan */
-  height: 400px;         /* sesuai permintaan */
+  bottom: -180px;
+  height: 420px;
   width: auto;
-  z-index: 95;           /* di atas road, di bawah/di atas gedung tergantung z-index gedung */
-  pointer-events: none;  /* klik tetap ke gedung, bukan ke bus */
+  z-index: 95;
+  pointer-events: none;
   user-select: none;
+  /* properti lama kamu biarkan */
+  animation: busBounce 1.2s ease-in-out infinite;
 }
 
-/* responsive: kecilkan pada layar sempit */
+
 @media (max-width: 900px) {
   #sceneBus { height: 220px; bottom: 90px; }
 }
+
 @media (max-width: 560px) {
   #sceneBus { height: 160px; bottom: 60px; }
+}
+
+
+
+
+/* Awan overlay besar di atas faculties */
+.scene-wrapper {
+  position: relative;
+}
+
+/* layer awan yang menimpa gedung */
+.cloud-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 120;           /* di depan gedung, tapi bisa diubah kalau terlalu mengganggu */
+  overflow: hidden;
+}
+
+/* dasar awan besar */
+.cloud-big {
+  position: absolute;
+  top: -15%;
+  width: 420px;           /* besar awan */
+  height: auto;
+  opacity: 0.70;          /* kabut tipis, bisa dinaikkan/turunkan */
+  filter: blur(1px);      /* sedikit blur biar lembut */
+}
+
+/* awan pertama: jalan pelan dari kiri ke kanan lalu balik */
+.cloud-a {
+  left: -30%;
+  animation: cloudDriftA 50s ease-in-out infinite;
+}
+
+/* awan kedua: jalan pelan dari kanan ke kiri lalu balik */
+.cloud-b {
+  right: -30%;
+  top: 6%;
+  width: 400px;
+  opacity: 0.50;
+  animation: cloudDriftB 65s ease-in-out infinite;
+}
+
+/* animasi kiri-kanan */
+@keyframes cloudDriftA {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(40vw); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes cloudDriftB {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-40vw); }
+  100% { transform: translateX(0); }
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .cloud-big {
+    width: 300px;
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 560px) {
+  .cloud-big {
+    width: 220px;
+    opacity: 0.25;
+  }
+}
+
+/* ===== Animasi bus: genjot dikit ===== */
+@keyframes busBounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-6px);  /* naik dikit */
+  }
+}
+
+/* ===== Ban bus: roda muter ===== */
+#sceneBus::before,
+#sceneBus::after {
+  content: "";
+  position: absolute;
+  bottom: 6%;              /* geser vertical roda relatif ke tinggi gambar bus */
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #111;
+  box-shadow: 0 0 0 6px #ffd324 inset;  /* pinggiran kuning biar nyatu sama bikun */
+  animation: wheelSpin 0.7s linear infinite;
+}
+
+/* posisi ban depan & belakang (silakan geser kalau belum pas) */
+#sceneBus::before {
+  left: 26%;               /* ban belakang */
+}
+#sceneBus::after {
+  right: 17%;              /* ban depan */
+}
+
+@keyframes wheelSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
