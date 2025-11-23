@@ -140,3 +140,20 @@ if (playBtn && anthem) {
   }
 
 })(); // IIFE END
+
+/* --- Anthem play --- */
+const logoBtn = document.getElementById('playAnthemLogo');
+const anthemAudio = document.getElementById('uiAnthem');
+
+logoBtn.onclick = function() {
+  if (anthemAudio.paused) {
+    anthemAudio.play();
+    logoBtn.style.filter = "drop-shadow(0 0 12px #ffc107)"; // efek saat play
+  } else {
+    anthemAudio.pause();
+    logoBtn.style.filter = ""; // reset efek
+  }
+};
+anthemAudio.onended = function() {
+  logoBtn.style.filter = "";
+};

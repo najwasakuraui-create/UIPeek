@@ -28,7 +28,6 @@
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#faculties">Faculties</a></li>
           <li class="nav-item"><a class="nav-link" href="#aboutus">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#more">More</a></li>
         </ul>
       </div>
     </div>
@@ -36,13 +35,17 @@
 
   <!-- Hero -->
  <section id="home" class="hero text-center">
+  <div class="cloud-hero">
+    <img src="assets/img/cloud.png" class="cloud cloud-1" alt="Awan 1">
+    <img src="assets/img/cloud2.png" class="cloud cloud-2" alt="Awan 2">
+  </div>
   <div class="container mt-5">
     <img src="assets/img/sdatang.png" alt="Selamat Datang UI" class="hero-title-img">
     <p>Mari Menjelajahi Fakultas, Jurusan, hingga UKT di Universitas Indonesia!</p>
-    <button id="playAnthem" class="btn btn-primary mt-3">▶️ Putar Anthem UI</button>
+<audio id="uiAnthem" src="assets/anthem.mp3" preload="auto"></audio>
+    <button id="startExplore" class="btn btn-primary mt-3" onclick="location.href='#faculties'">🚀 Mulai Menjelajah</button>
 
     <!-- Audio: Anthem UI -->
-    <audio id="uiAnthem" src="assets/anthem.mp3" preload="auto"></audio>
   </div>
 </section>
 
@@ -58,7 +61,8 @@
           </p>
         </div>
         <div class="col-md-6 text-center">
-          <img src="assets/img/makara-ui.png" class="img-fluid makara-img rounded shadow-sm" alt="Makara UI">
+          <img src="assets/img/makara-ui.png" id="playAnthemLogo" class="img-fluid makara-img rounded shadow-sm" alt="Makara UI" style="cursor:pointer;">
+          <audio id="uiAnthem" src="assets/anthem.mp3" preload="auto"></audio>
         </div>
       </div>
     </div>
@@ -67,13 +71,12 @@
 <!-- START: faculties (ganti section faculties lama dengan ini) -->
 <section id="faculties" class="faculties-fullpage" tabindex="-1">
   <div class="container-fluid px-2">
-    <img src="assets/img/Fakul-resized.png" alt="" class="fakul">
-    <!-- <h2 class="fakul text-center mb-3">Gedung Fakultas UI</h2> -->
+    <h2 class="fakul text-center mb-3">Gedung Fakultas UI</h2>
     <div class="scene-wrapper">
-            <!-- Awan overlay -->
+      <!-- Awan overlay -->
       <div class="cloud-overlay">
-        <img src="assets/img/cloud.png" class="cloud-big cloud-a" alt="Awan 1">
-        <img src="assets/img/cloud2.png" class="cloud-big cloud-b" alt="Awan 2">
+        <img src="assets/img/cloud.png" class="cloud-big cloud-a" alt="Awan Besar 1">
+        <img src="assets/img/cloud2.png" class="cloud-big cloud-b" alt="Awan Besar 2">
       </div>
 
       <!-- letakkan ini di dalam .scene-wrapper -->
@@ -845,7 +848,7 @@
       <!-- Anggota 2 -->
       <div class="col-md-2 col-sm-4">
         <div class="card border-0 shadow-sm p-3">
-          <img src="anggota2.jpg" class="team-photo rounded-circle mb-3" alt="Anggota 2">
+          <img src="assets/img/faisal.jpg" class="team-photo rounded-circle mb-3" alt="Anggota 2">
           <h6 class="fw-bold mb-0">Faisal</h6>
           <p class="text-muted small">Developer</p>
         </div>
@@ -854,7 +857,7 @@
       <!-- Anggota 3 -->
       <div class="col-md-2 col-sm-4">
         <div class="card border-0 shadow-sm p-3">
-          <img src="anggota3.jpg" class="team-photo rounded-circle mb-3" alt="Anggota 3">
+          <img src="assets/img/nabila.jpg" class="team-photo rounded-circle mb-3" alt="Anggota 3">
           <h6 class="fw-bold mb-0">Nala</h6>
           <p class="text-muted small">Developer</p>
         </div>
@@ -863,7 +866,7 @@
       <!-- Anggota 4 -->
       <div class="col-md-2 col-sm-4">
         <div class="card border-0 shadow-sm p-3">
-          <img src="anggota4.jpg" class="team-photo rounded-circle mb-3" alt="Anggota 4">
+          <img src="assets/img/zaky.jpg" class="team-photo rounded-circle mb-3" alt="Anggota 4">
           <h6 class="fw-bold mb-0">Zaky</h6>
           <p class="text-muted small">Developer</p>
         </div>
@@ -872,7 +875,7 @@
       <!-- Anggota 5 -->
       <div class="col-md-2 col-sm-4">
         <div class="card border-0 shadow-sm p-3">
-          <img src="anggota5.jpg" class="team-photo rounded-circle mb-3" alt="Anggota 5">
+          <img src="assets/img/caitlyn.jpg" class="team-photo rounded-circle mb-3" alt="Anggota 5">
           <h6 class="fw-bold mb-0">Caitlyn</h6>
           <p class="text-muted small">Developer</p>
         </div>
