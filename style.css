@@ -75,6 +75,12 @@ footer {
   padding: 60px 0;
 }
 
+.fakul{
+  display: flex;
+  width: 100px;    /* kamu bisa ubah sesuai keinginan */
+  max-width: 90%;
+  margin: 0 auto 12px auto;
+}
 
 .makara-img {
   max-width: 300px;
@@ -236,6 +242,12 @@ footer {
 }
 
 
+.modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: inherit; /* agar warna header tetap */
+}
 
 /* Responsive */
 @media (max-width: 1000px) {
