@@ -3,7 +3,7 @@ html {
 }
 
 nav {
-  background: linear-gradient(180deg, #e8f9ff);
+  background: linear-gradient(180deg, #ebf7ff);
 }
 
 .navbar-brand {
@@ -15,15 +15,15 @@ nav {
   height: 60px; /* ubah sesuai ukuran */
 }
 
-
 body {
-  background: linear-gradient(180deg, #5dc9ff, #e9faff);
+  background: linear-gradient(180deg, #e9faff);
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 #more {
-  background: linear-gradient(180deg, #d6f3ff);
+  background: linear-gradient(180deg, #e9faff);
   margin: 0;
   padding: 0;
 }
@@ -41,8 +41,9 @@ footer {
 }
 
 .hero {
-  background: linear-gradient(180deg, #75cfff);
+  background: linear-gradient(180deg, #5dc9ff, #e9faff);
   padding: 80px 0;
+  height: calc(100vh + 65px);
 }
 
 .hero h1 {
@@ -62,10 +63,16 @@ footer {
 
 
 .hero-title-img {
-  display: block;
+  display: flex;
   width: 620px;    /* kamu bisa ubah sesuai keinginan */
   max-width: 90%;
   margin: 0 auto 12px auto;
+}
+
+#about {
+  height: calc(100vh - 65px);
+  background: linear-gradient(180deg, #e9faff);
+  padding: 60px 0;
 }
 
 
@@ -96,15 +103,6 @@ footer {
 /* HOVER (container) */
 .building:hover {
   transform: scale(1.05);
-}
-
-#about {
-  background-image: 
-    url("assets/img/cloud.png"),
-    url("assets/img/cloud2.png");
-  background-size: 150px, 200px;
-  background-position: left top, right center;
-  background-repeat: no-repeat, no-repeat;
 }
 
 /* FACULTIES ROAD AREA */
@@ -153,12 +151,14 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 36px;
-  padding: 28px 40px;
+  padding: 28px 0;
   overflow-x: auto;
   overflow-y: hidden;
-  width: 100%;
+  width: 100vw; /* penuh layar */
+  margin-left: 50%;
+  transform: translateX(-50%);
   box-sizing: border-box;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -303,7 +303,7 @@ footer {
 .cloud-big {
   position: absolute;
   top: -15%;
-  width: 420px;           /* besar awan */
+  width: 300px;           /* besar awan */
   height: auto;
   opacity: 0.70;          /* kabut tipis, bisa dinaikkan/turunkan */
   filter: blur(1px);      /* sedikit blur biar lembut */
@@ -311,6 +311,7 @@ footer {
 
 /* awan pertama: jalan pelan dari kiri ke kanan lalu balik */
 .cloud-a {
+  top: 0;
   left: -30%;
   animation: cloudDriftA 50s ease-in-out infinite;
 }
@@ -318,7 +319,7 @@ footer {
 /* awan kedua: jalan pelan dari kanan ke kiri lalu balik */
 .cloud-b {
   right: -30%;
-  top: 6%;
+  top: 10%;
   width: 400px;
   opacity: 0.50;
   animation: cloudDriftB 65s ease-in-out infinite;
